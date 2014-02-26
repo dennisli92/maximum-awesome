@@ -31,3 +31,67 @@ function! s:RemoveConflictingAlignMaps()
 endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
+
+
+" BEGIN Dennis Settings
+set backupdir=~/tmp
+set swapfile
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set nolist
+
+autocmd BufNewFile,BufRead *.tex set spell
+autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
+
+" Settings for window pane
+set splitbelow
+set splitright
+
+map <S-Enter> 0<Esc>
+map <CR> o<Esc>
+inoremap <Tab> <C-p>
+set autochdir
+
+noremap <C-S-tab> <Esc>:tabprevious<CR>
+noremap <C-tab>   <Esc>:tabnext<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>
+inoremap <C-tab>   <Esc>:tabnext<CR>
+nnoremap <C-Insert> :tabnew<CR>
+nnoremap <C-Delete> :tabclose<CR>
+nnoremap <leader>G :GundoToggle<CR>
+
+autocmd VimEnter * wincmd p
+autocmd vimenter * if !argc() | NERDTree | endif
+
+filetype plugin on
+
+autocmd BufWritePre * :%s/\s\+$//e
+let g:Tex_CompileRule_pdf = 'latexmk -pdf'
+
+function! NERDTreeQuit()
+  redir => buffersoutput
+  silent buffers
+  redir END
+"                     1BufNo  2Mods.     3File           4LineNo
+  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+  let windowfound = 0
+
+  for bline in split(buffersoutput, "\n")
+    let m = matchlist(bline, pattern)
+
+    if (len(m) > 0)
+      if (m[2] =~ '..a..')
+        let windowfound = 1
+      endif
+    endif
+  endfor
+
+  if (!windowfound)
+    quitall
+  endif
+endfunction
+
+vnoremap <C-c> "*y
+set clipboard=unnamed

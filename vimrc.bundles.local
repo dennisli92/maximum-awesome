@@ -1,0 +1,4 @@
+Bundle 'ervandew/supertab'
+Bundle 'sjl/gundo.vim'
+Bundle 'Raimondi/delimitMate'
+
