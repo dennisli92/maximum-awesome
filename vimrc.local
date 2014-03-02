@@ -60,7 +60,7 @@ inoremap <C-S-tab> <Esc>:tabprevious<CR>
 inoremap <C-tab>   <Esc>:tabnext<CR>
 nnoremap <C-Insert> :tabnew<CR>
 nnoremap <C-Delete> :tabclose<CR>
-nnoremap <leader>G :GundoToggle<CR>
+nnoremap <F5> :GundoToggle<CR>
 
 autocmd VimEnter * wincmd p
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -95,3 +95,5 @@ endfunction
 
 vnoremap <C-c> "*y
 set clipboard=unnamed
+
+au BufNewFile,BufRead *.grm set filetype=sml
