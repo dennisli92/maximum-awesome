@@ -1,4 +1,6 @@
 Bundle 'ervandew/supertab'
 Bundle 'sjl/gundo.vim'
 Bundle 'Raimondi/delimitMate'
-
+Bundle 'tpope/vim-markdown'
+Bundle 'mikewest/vimroom'
+Bundle 'vim-pandoc/vim-pandoc'
