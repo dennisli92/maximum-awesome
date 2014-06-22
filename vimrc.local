@@ -120,3 +120,20 @@ endfunction
 
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+
+" powerline stuff
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h13
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+
+if has("gui_running")
+   let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline:h13
+   endif
+endif
