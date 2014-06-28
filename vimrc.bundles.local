@@ -5,3 +5,5 @@ Bundle 'tpope/vim-markdown'
 Bundle 'mikewest/vimroom'
 Bundle 'vim-pandoc/vim-pandoc'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'jplaut/vim-arduino-ino'
+Bundle 'tpope/vim-fireplace.git'
