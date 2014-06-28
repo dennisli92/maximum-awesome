@@ -138,3 +138,5 @@ if has("gui_running")
 endif
 
 let NERDTreeShowHidden=1
+
+let g:vim_arduino_auto_open_serial = 1
