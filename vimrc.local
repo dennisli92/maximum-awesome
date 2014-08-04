@@ -67,7 +67,8 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 filetype plugin on
 
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
+
 let g:Tex_CompileRule_pdf = 'latexmk -pdf'
 
 function! NERDTreeQuit()
