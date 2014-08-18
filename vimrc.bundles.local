@@ -8,3 +8,5 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'jplaut/vim-arduino-ino'
 Bundle 'tpope/vim-fireplace.git'
 Bundle 'wavded/vim-stylus.git'
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-misc'
