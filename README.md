@@ -1,3 +1,11 @@
+# Notes from Dennis
+Install JShint with 'npm install -g jshint'
+
+Run 'mkdir ~/tmp' to create the folder for backups
+
+Create symlinks for '.vimrc.local',  '.vimrc.bundles.local' to the repo versions.
+
+
 # Maximum Awesome
 
 Config files for vim and tmux, lovingly tended by a small subculture of
@@ -84,3 +92,4 @@ request, we'll make sure you're in the list of people who have signed a CLA.
 
 Thanks to the vimsters at Square who put this together. Thanks to Tim Pope for
 his awesome vim plugins.
+
