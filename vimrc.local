@@ -141,5 +141,4 @@ endif
 let NERDTreeShowHidden=1
 
 let g:vim_arduino_auto_open_serial = 1
-autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
-
+" autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
