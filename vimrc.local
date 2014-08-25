@@ -142,3 +142,6 @@ let NERDTreeShowHidden=1
 
 let g:vim_arduino_auto_open_serial = 1
 " autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
+
+let g:session_autosave = 1
+let g:session_autoload = 1
