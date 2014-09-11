@@ -1,9 +1,10 @@
 # Notes from Dennis
-Install JShint with 'npm install -g jshint'
+~~Install JShint with 'npm install -g jshint'~~
 
 Run 'mkdir ~/tmp' to create the folder for backups
 
 Create symlinks for '.vimrc.local',  '.vimrc.bundles.local' to the repo versions.
+
 
 
 # Maximum Awesome
