@@ -63,36 +63,12 @@ nnoremap <C-Delete> :tabclose<CR>
 nnoremap <F5> :GundoToggle<CR>
 
 autocmd VimEnter * wincmd p
-" autocmd vimenter * if !argc() | NERDTree | endif
 
 filetype plugin on
 
 " autocmd BufWritePre * :%s/\s\+$//e
 
 let g:Tex_CompileRule_pdf = 'latexmk -pdf'
-
-function! NERDTreeQuit()
-  redir => buffersoutput
-  silent buffers
-  redir END
-  " 1BufNo  2Mods.     3File           4LineNo
-  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
-  let windowfound = 0
-
-  for bline in split(buffersoutput, "\n")
-    let m = matchlist(bline, pattern)
-
-    if (len(m) > 0)
-      if (m[2] =~ '..a..')
-        let windowfound = 1
-      endif
-    endif
-  endfor
-
-  if (!windowfound)
-    quitall
-  endif
-endfunction
 
 vnoremap <C-c> "*y
 set clipboard=unnamed
@@ -138,10 +114,7 @@ if has("gui_running")
    endif
 endif
 
-let NERDTreeShowHidden=1
-
 let g:vim_arduino_auto_open_serial = 1
-" autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
 
 let g:session_autosave = 1
 let g:session_autoload = 0
