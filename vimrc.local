@@ -34,7 +34,7 @@ silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
 
 " BEGIN Dennis Settings
-set backupdir=~/tmp
+set backupdir=~/dotfiles/maximum-awesome/tmp/
 set swapfile
 
 set tabstop=2
@@ -75,7 +75,7 @@ function! NERDTreeQuit()
   redir => buffersoutput
   silent buffers
   redir END
-"                     1BufNo  2Mods.     3File           4LineNo
+  " 1BufNo  2Mods.     3File           4LineNo
   let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
   let windowfound = 0
 
