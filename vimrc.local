@@ -32,7 +32,6 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
-
 " BEGIN Dennis Settings
 set backupdir=~/dotfiles/maximum-awesome/tmp/
 set swapfile
@@ -66,15 +65,8 @@ autocmd VimEnter * wincmd p
 
 filetype plugin on
 
-" autocmd BufWritePre * :%s/\s\+$//e
-
-let g:Tex_CompileRule_pdf = 'latexmk -pdf'
-
 vnoremap <C-c> "*y
 set clipboard=unnamed
-
-au BufNewFile,BufRead *.grm set filetype=sml
-au BufNewFile,BufRead *.tig set filetype=sml
 
 function! MarkWindowSwap()
     let g:markedWinNum = winnr()
@@ -114,11 +106,10 @@ if has("gui_running")
    endif
 endif
 
-let g:vim_arduino_auto_open_serial = 1
-
 let g:session_autosave = 1
 let g:session_autoload = 0
 
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_javascript_jsxhint_args = '--config ~/.jshintrc'
-let g:syntastic_check_on_open = 1
+
+let g:netrw_sort_options = "i"
