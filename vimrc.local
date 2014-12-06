@@ -36,6 +36,9 @@ silent! autocmd VimEnter * RemoveConflictingAlignMaps
 set backupdir=~/dotfiles/maximum-awesome/tmp/
 set swapfile
 
+set undodir=~/dotfiles/maximum/undo
+set undofile
+
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -111,5 +114,12 @@ let g:session_autoload = 0
 
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_javascript_jsxhint_args = '--config ~/.jshintrc'
+" let g:syntastic_javascript_jscs_args = '--config ~/.jscsrc'
+
+let g:syntastic_check_on_open = 1
 
 let g:netrw_sort_options = "i"
+
+let g:gundo_auto_preview = 1
+
+set hlsearch
