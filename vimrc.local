@@ -123,3 +123,4 @@ let g:netrw_sort_options = "i"
 let g:gundo_auto_preview = 1
 
 set hlsearch
+set tw=120
