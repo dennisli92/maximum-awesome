@@ -35,7 +35,7 @@ command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
 " BEGIN Dennis Settings
-set backupdir=~/dotfiles/maximum-awesome/tmp/
+" set backupdir=~/dotfiles/maximum-awesome/tmp/
 set swapfile
 
 set undodir=~/dotfiles/maximum/undo
@@ -95,21 +95,9 @@ endfunction
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 
-" powerline stuff
 set guifont=Ubuntu\ Mono\ derivative\ Powerline:h13
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-" set term=xterm-256color
-set termencoding=utf-8
-
-if has("gui_running")
-   let s:uname = system("uname")
-   if s:uname == "Darwin\n"
-    set guifont=Ubuntu\ Mono\ derivative\ Powerline:h13
-   endif
-endif
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 let g:session_autosave = 1
 let g:session_autoload = 0
@@ -133,3 +121,27 @@ set tw=120
 set autochdir
 set cul
 set cuc
+
+" http://dougblack.io/words/a-good-vimrc.html
+filetype indent on      " load filetype-specific indent files
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
