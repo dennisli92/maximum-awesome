@@ -118,7 +118,6 @@ let g:python_host_prog = '~/miniconda/bin/python'
 
 set hlsearch
 set tw=120
-set autochdir
 set cul
 set cuc
 
@@ -129,7 +128,7 @@ set lazyredraw          " redraw only when we need to.
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+" nnoremap <leader><space> :nohlsearch<CR>
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
