@@ -70,8 +70,8 @@ autocmd VimEnter * wincmd p
 
 filetype plugin on
 
-vnoremap <C-c> "*y
-set clipboard=unnamed
+" vnoremap <C-c> "*y
+" set clipboard=unnamed
 
 function! MarkWindowSwap()
     let g:markedWinNum = winnr()
@@ -144,3 +144,5 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
+
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
