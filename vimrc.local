@@ -113,7 +113,7 @@ let g:netrw_sort_options = "i"
 
 let g:gundo_auto_preview = 1
 
-let g:python_host_prog = '~/miniconda/bin/python'
+let g:python_host_prog = '~/anaconda/bin/python'
 
 set hlsearch
 set tw=120
