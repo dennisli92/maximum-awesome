@@ -101,9 +101,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:session_autosave = 1
 let g:session_autoload = 0
 
-let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_args = '--config ~/.eslintrc'
-let g:syntastic_javascript_jsxhint_args = '--config ~/.jshintrc'
 
 let g:loaded_syntastic_scala_scalac_checker = 1
 
